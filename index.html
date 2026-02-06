@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thajnisha C | Web Developer</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: linear-gradient(135deg, #1f2937, #111827);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      animation: slideDown 1s ease;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    header h1 {
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      background: #fff;
+      margin: 25px 0;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    h2 {
+      color: #1f2937;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 50px;
+      height: 3px;
+      background: #1f2937;
+      display: block;
+      margin-top: 6px;
+      border-radius: 2px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #e5e7eb;
+      padding: 8px 14px;
+      margin: 6px;
+      border-radius: 25px;
+      font-size: 14px;
+      transition: 0.3s;
+      cursor: default;
+    }
+
+    .skills span:hover {
+      background: #1f2937;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .project {
+      margin-bottom: 15px;
+      padding-left: 10px;
+      border-left: 3px solid #1f2937;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      padding-left: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #1f2937, #374151);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: 0.4s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Thajnisha C</h1>
+    <p>Aspiring Web Developer | HTML | CSS | JavaScript | Bootstrap | WordPress</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a Computer Science graduate with a strong interest in web development.
+        I enjoy creating responsive, clean, and user-friendly websites.
+        Currently looking for internship or entry-level opportunities to grow professionally.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Bootstrap</span>
+        <span>WordPress</span>
+        <span>Java</span>
+        <span>SQL</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="project">
+        <strong>Personal Portfolio Website</strong>
+        <p>Designed and developed a responsive portfolio using HTML & CSS.</p>
+      </div>
+
+      <div class="project">
+        <strong>Responsive Landing Page</strong>
+        <p>Created a modern landing page using Bootstrap.</p>
+      </div>
+
+      <div class="project">
+        <strong>Login Form UI</strong>
+        <p>Built a clean login form with validation concepts.</p>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>📧 Email: thajnishac262k@gmail.com</p>
+      <p>📞 Phone: 8668006754</p>
+      <a class="btn" href="#">Download Resume</a>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 Thajnisha C | Web Developer
+  </footer>
+
+</body>
+</html>
