@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 1 | Portfolio Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ddd;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.5s, box-shadow 0.5s;
+      animation: slideUp 1.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #00e6e6;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #00e6e6;
+      color: #000;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background: #00cccc;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Animated Portfolio Website</h1>
+    <p>A modern responsive portfolio project with smooth animations</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>HTML & CSS</h3>
+        <p>Clean structure with modern layout techniques and glassmorphism design.</p>
+      </div>
+
+      <div class="card">
+        <h3>Animations</h3>
+        <p>Hover effects, fade-in and slide animations for better user experience.</p>
+      </div>
+
+      <div class="card">
+        <h3>Responsive</h3>
+        <p>Works perfectly on mobile, tablet, and desktop screens.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn">Back to Home</a>
+  </div>
+
+</body>
+</html>
