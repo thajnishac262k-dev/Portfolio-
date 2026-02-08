@@ -2,206 +2,227 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thajnisha C | Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: #f5f7fa;
+      background: #f4f6fb;
       color: #333;
-      line-height: 1.6;
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
     }
 
     header {
-      background: linear-gradient(135deg, #1f2937, #111827);
-      color: #fff;
+      background: linear-gradient(135deg, #1f2937, #2563eb);
+      color: white;
       text-align: center;
       padding: 60px 20px;
-      animation: slideDown 1s ease;
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+      animation: fadeDown 1.2s ease;
     }
 
     header h1 {
-      font-size: 36px;
-      letter-spacing: 1px;
+      font-size: 2.5rem;
     }
 
     header p {
       margin-top: 10px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+      font-size: 1.1rem;
     }
 
     section {
-      background: #fff;
-      margin: 25px 0;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      animation: fadeUp 1s ease;
     }
 
     h2 {
-      color: #1f2937;
-      margin-bottom: 12px;
-      position: relative;
+      margin-bottom: 15px;
+      color: #2563eb;
+      border-left: 5px solid #2563eb;
+      padding-left: 10px;
     }
 
-    h2::after {
-      content: "";
-      width: 50px;
-      height: 3px;
-      background: #1f2937;
-      display: block;
-      margin-top: 6px;
-      border-radius: 2px;
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
     }
 
     .skills span {
       display: inline-block;
-      background: #e5e7eb;
+      background: #e0e7ff;
+      color: #1e3a8a;
       padding: 8px 14px;
+      border-radius: 20px;
       margin: 6px;
-      border-radius: 25px;
-      font-size: 14px;
-      transition: 0.3s;
-      cursor: default;
+      font-size: 0.9rem;
     }
 
-    .skills span:hover {
-      background: #1f2937;
-      color: #fff;
-      transform: scale(1.05);
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
 
     .project {
-      margin-bottom: 15px;
-      padding-left: 10px;
-      border-left: 3px solid #1f2937;
-      transition: 0.3s;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
     }
 
     .project:hover {
-      padding-left: 15px;
+      transform: scale(1.05);
+    }
+
+    .project h3 {
+      margin-bottom: 10px;
+      color: #1f2937;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 15px;
-      padding: 12px 24px;
-      background: linear-gradient(135deg, #1f2937, #374151);
-      color: #fff;
+      padding: 10px 18px;
+      background: #2563eb;
+      color: white;
       text-decoration: none;
-      border-radius: 30px;
-      transition: 0.4s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      border-radius: 25px;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
     }
 
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      background: #1e40af;
     }
 
     footer {
       text-align: center;
       padding: 25px;
-      font-size: 14px;
-      color: #666;
+      background: #1f2937;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Thajnisha C</h1>
-    <p>Aspiring Web Developer | HTML | CSS | JavaScript | Bootstrap | WordPress</p>
-  </header>
+<header>
+  <h1>Thajnisha C</h1>
+  <p>Web Developer | HTML • CSS • JavaScript • Bootstrap</p>
+  <p>Pattukkottai, Thanjavur</p>
+</header>
 
-  <div class="container">
+<section>
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      Passionate and highly motivated Web Developer with a strong foundation in front-end and back-end technologies.
+      I enjoy creating responsive, user-friendly websites and continuously learning new technologies.
+    </p>
+  </div>
+</section>
 
-    <section>
-      <h2>About Me</h2>
+<section>
+  <h2>Skills</h2>
+  <div class="card skills">
+    <span>HTML5</span>
+    <span>CSS3</span>
+    <span>JavaScript</span>
+    <span>Bootstrap</span>
+    <span>Java</span>
+    <span>SQL</span>
+    <span>WordPress</span>
+    <span>VS Code</span>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="project">
+      <h3>Personal Portfolio Website</h3>
       <p>
-        I am a Computer Science graduate with a strong interest in web development.
-        I enjoy creating responsive, clean, and user-friendly websites.
-        Currently looking for internship or entry-level opportunities to grow professionally.
+        A responsive personal portfolio website built using HTML, CSS and animations to showcase skills and projects.
       </p>
-    </section>
+      <a class="btn" href="#">View Project</a>
+    </div>
 
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Bootstrap</span>
-        <span>WordPress</span>
-        <span>Java</span>
-        <span>SQL</span>
-      </div>
-    </section>
+    <div class="project">
+      <h3>Simple E-Commerce Website</h3>
+      <p>
+        A basic shopping website UI with product cards, price display and responsive layout using Bootstrap.
+      </p>
+      <a class="btn" href="#">View Project</a>
+    </div>
 
-    <section>
-      <h2>Projects</h2>
-
-      <div class="project">
-        <strong>Personal Portfolio Website</strong>
-        <p>Designed and developed a responsive portfolio using HTML & CSS.</p>
-      </div>
-
-      <div class="project">
-        <strong>Responsive Landing Page</strong>
-        <p>Created a modern landing page using Bootstrap.</p>
-      </div>
-
-      <div class="project">
-        <strong>Login Form UI</strong>
-        <p>Built a clean login form with validation concepts.</p>
-      </div>
-
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>📧 Email: thajnishac262k@gmail.com</p>
-      <p>📞 Phone: 8668006754</p>
-      <a class="btn" href="#">Download Resume</a>
-    </section>
+    <div class="project">
+      <h3>Student Management System (UI)</h3>
+      <p>
+        A front-end interface for managing student details using HTML, CSS and JavaScript.
+      </p>
+      <a class="btn" href="#">View Project</a>
+    </div>
 
   </div>
+</section>
 
-  <footer>
-    © 2025 Thajnisha C | Web Developer
-  </footer>
+<section>
+  <h2>Education</h2>
+  <div class="card">
+    <p><strong>B.Sc Computer Science</strong> – STET Women's College (2019–2022) – 90%</p>
+    <p>HSC – Government Girls Higher Secondary School – 65%</p>
+    <p>SSLC – Government Girls Higher Secondary School – 90%</p>
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: thajnishac262k@gmail.com</p>
+    <p>Phone: 8668006754</p>
+    <p>Languages: Tamil, English</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Thajnisha C | Web Developer</p>
+</footer>
 
 </body>
 </html>
